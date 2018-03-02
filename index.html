@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My first Task </title>
+    <link rel="stylesheet" href="libraries/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="libraries/toastr.css" type="text/css" />
+    <link rel="stylesheet" href="css/sidebar.css" type="text/css" />
+    <link rel="stylesheet" href="css/forms.css" type="text/css" />
+    <link rel="stylesheet" href="css/content.css" type="text/css" />
+</head>
+
+<body>
+    <div class="master-container">
+        <div class="side-bar">
+            <ul class="main-menu">
+                <li class="brand"><a>GlobalDev</a></li>
+                <li class="nav-item"><a href="#" class="navigation" data-div="viewPatientsList">Patients</a> </li>
+                <li class="nav-item"><a href="#" class="navigation" data-div="viewUsersList">Users</a> </li>
+                <li class="logOut"><a href="#">Log Out</a> </li>
+            </ul>
+        </div>
+
+        <div class="content">
+
+                    <!-- patientsList.html -->
+
+
+
+
+                <div class="user-edit screen">
+                <form class="user-form">
+                    <h1>Add New User</h1>
+                    <div>
+                        <div class="input-group">
+                            <label for="ufname">First Name</label>
+                            <input type="text" name="ufname" id="ufname" class="ufname" />
+                        </div>
+                        <div class="input-group">
+                            <label for="umname">Middle Name</label>
+                            <input type="text" name="umname" id="umname" class="umname" />
+                        </div>
+                        <div class="input-group">
+                            <label for="ulname">Last Name</label>
+                            <input type="text" name="ulname" id="ulname" class="ulname" />
+                        </div>
+                        <div class="input-group">
+                            <label for="ulogname">Log in Name</label>
+                            <input type="text" name="ulogname" id="ulogname" class="ulogname" />
+                        </div>
+                        <div class="input-group">
+                            <label for="uactive">Active</label>
+                            <input type="checkbox" name="uactive" id="uactive" class="uactive" />
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="input-group">
+                            <label for="upass">Password</label>
+                            <input type="password" name="upass" id="upass" class="upass" />
+                        </div>
+                        <div class="input-group">
+                            <label for="urole">role</label>
+                            <select id="urole" class="urole">
+                                           <option value="0">superAdmin</option>
+                                           <option value="1">admin</option>
+                                           <option value="2">user</option>
+                                       </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="ucreatedBy">ucreated By</label>
+                            <select id="ucreatedBy" class="ucreatedBy">
+                                           <option value="0">superAdmin</option>
+                                       </select>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" onclick="addNewUser()">Save New</button>
+                        <button class="btn btn-default" onclick="">Cancle</button>
+                    </div>
+
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script type="text/javascript" src="libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="libraries/toastr.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libraries/moment.js"></script>
+
+
+    <script type="text/javascript" src="js/utils/valdationEngine.js"></script>
+    <script type="text/javascript" src="js/data/patientData.js"></script>
+    <script type="text/javascript" src="js/screens/dataService.js"></script>
+    <script type="text/javascript" src="js/screens/patientEdit.js"></script>
+    <script type="text/javascript" src="js/screens/patientList.js"></script>
+    <script type="text/javascript" src="js/utils/routerEngine.js"></script>
+    <script type="text/javascript" src="js/utils/renderEngine.js"></script>
+    <script type="text/javascript" src="js/utils/navigator.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    
+     <script type="text/template" id="patientTableTemplate">
+                                <tr data-patientid="{{ID}}" >
+                                    <td>{{ID}}</td>
+                                    <td>{{fname}} {{mname}} {{lname}} </td>
+                                    <td>{{email}}</td>
+                                    <td>{{gender}}</td>
+                                    <td class="dateFormat">{{DOB}}</td>
+                                    <td>{{Active}}</td>
+                                    <td>at {{creationDate}} by {{CreatedBy}}</td>
+                                </tr>
+    </script>
+
+</body>
+<!-- moment(mom).format("MM-DD-YYYY") -->
+</html>

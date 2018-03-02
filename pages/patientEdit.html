@@ -1,0 +1,67 @@
+<div class="patient-edit">
+    <form class="patient-form">
+        <h1 class="patient-title">Add New Patient</h1>
+        <div class="form-group">
+            <label class="input-name" for="pfname">First Name</label>
+            <input type="text" name="pfname" input-name="first name" class="form-control pfname" id="pfname" data-validation="required" />
+            <p class="text-danger pfnameerror perror error-message"></p>
+        </div>
+        <div class="form-group">
+            <label class="input-name" for="pmname">Middle Name</label>
+            <input type="text" name="pmname" input-name="second name" class="form-control pmname" id="pmname" data-validation="required" />
+            <p class="pmnameerror text-danger perror error-message"></p>
+        </div>
+        <div class="form-group">
+            <label class="input-name" for="plname">Last Name</label>
+            <input type="text"name="plname" input-name="last name" class="form-control plname" id="plname" data-validation="required"  />
+            <p class="plnameerror text-danger perror error-message"></p>
+        </div>
+        <div class="form-group">
+            <label class="input-name" for="pstatus">status</label>
+            <select id="pstatus" name="pstatus" class="form-control pstatus" input-name="status" data-validation="required">
+                <option></option>
+                <option value="0">Draft</option>
+                <option value="1">saved</option>
+                <option value="2">Deleted</option>
+            </select>
+            <p class="pstatuserror text-danger perror error-message"></p>
+        </div>
+        <div class="form-group">
+            <label class="input-name"  for="pemail">email</label>
+            <input type="email" id="pemail" name="pemail" input-name="email" class="form-control pemail" data-validation="required,email" />
+            <p class="pemailerror text-danger perror error-message"></p>
+        </div>
+        <div class="form-group">
+            <label class="input-name" for="pbod">birth of date</label>
+            <input type="date" name="pbod" id="pbod" input-name="birth date" class="form-control pbod" data-validation="required,date"  />
+            <p class="pboderror text-danger perror error-message" ></p>
+        </div>
+        <div class="form-group">
+            <label class="input-name" for="plastcheck">last check</label>
+            <select name="plastcheck" id="plastcheck" class="form-control plastcheck" input-name="last check" data-validation="required">
+                <option></option>
+                <option value="0">Draft</option>
+                <option value="1">saved</option>
+                <option value="2">Deleted</option>
+            </select>
+            <p class="plastcheckerror text-danger "></p>
+            <p class="pgendererror text-danger perror error-message"></p>
+        </div>
+        <div class="form-group">
+            <label class="input-name">gender</label>
+            <input type="radio" class="gender-type" name="gender" value="1" input-name="gender" />Male
+            <input type="radio" class="gender-type" name="gender" value="2" input-name="gender" />Female
+            <p class="pgendererror text-danger perror error-message"></p>
+        </div>
+        <div class="form-group">
+            <label class="input-name checkname" for="pactive">Active</label>
+            <input type="checkbox" name="pactive" id="pactive" class="pactive" data-validation="required" />
+        </div>
+        <div>
+            <button type="button" class="savePatient-btn btn btn-primary">Save New</button>
+            <button type="button" class="deletePatient-btn btn btn-primary">Delete This Patient</button>
+            <button type="button" class="btn btn-default navigation" data-div=".patients-list">Cancle</button>
+        </div>
+
+    </form>
+</div>
