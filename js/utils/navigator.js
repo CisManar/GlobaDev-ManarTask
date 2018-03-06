@@ -10,7 +10,7 @@ function navigator()
 
         });
     }
-    
+    /*
     this.Go = function(divVal) {
         
         hideAll();
@@ -26,5 +26,5 @@ function navigator()
         
         $(divVal).show();
     };
-    
+    */
 }

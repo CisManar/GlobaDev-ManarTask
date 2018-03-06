@@ -12,9 +12,12 @@ function patientEdit() {
     //------------- ( Initial ) -------------
     //-------------------------------------------------------
 
-    this.init = function() {
-        
+    this.init = function(gid) {
+
+        patientEdit.showForm( gid );
+
         $(".savePatient-btn").click(function() {
+
 
             getFormValues();
             var result=validation.validate();

@@ -3,7 +3,7 @@ function patientList()
     var gid=null;
     var patientDataArray;
 
-    this.init=function() {
+    this.init=function(gid) {
         
         patientDataArray=dataservice.getAll();
 
@@ -12,8 +12,7 @@ function patientList()
         $(".addNew-btn").click(function() {
 
             routeEng.Go("viewEditList",null);
-         // patientEdit.showForm( gid );
-          $(".deletePatient-btn").hide();
+            $(".deletePatient-btn").hide();
 
             
         });
